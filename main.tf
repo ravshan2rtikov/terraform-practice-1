@@ -18,8 +18,15 @@ resource "aws_vpc" "main" {
   }
 }
 
+resource "aws_vpc" "second" {
+  cidr_block = "192.168.0.0/16"
+  tags = {
+    Name = "Second VPC"
+  }
+}
+
 variable "aws_region" {
   description = "AWS region"
   type        = string
-  default     = "ap-southeast-1"  # Change as needed
+  default     = "ap-southeast-1" 
 }
