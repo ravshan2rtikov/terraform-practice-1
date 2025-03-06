@@ -18,3 +18,8 @@ variable "subnet_cidr_block" {
   description = "Subnet CIDR block"
   type        = string
 }
+
+variable "my_public_ip" {
+  description = "my public IP address"
+  type        = string
+}
