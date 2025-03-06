@@ -20,33 +20,9 @@ resource "aws_vpc" "main" {
 
 resource "aws_subnet" "web" {
   vpc_id            = aws_vpc.main.id
-  cidr_block        = var.web_subnet
+  cidr_block        = var.subnet_cidr_block
   availability_zone = var.az1
   tags = {
     "Name" = "Web Subnet"
   }
-}
-
-variable "aws_region" {
-  description = "AWS region"
-  type        = string
-  default     = "ap-southeast-1"
-}
-
-variable "az1" {
-  description = "Availability zone 1"
-  type = string
-  default = "ap-southeast-1a"
-}
-
-variable "vpc_cidr_block" {
-  description = "VPC CIDR block"
-  type = string
-  default = "10.0.0.0/16"
-}
-
-variable "web_subnet" {
-  description = "Subnet CIDR block"
-  type = string
-  default = "10.0.10.0/24"
 }
