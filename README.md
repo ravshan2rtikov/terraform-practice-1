@@ -1,2 +1,2 @@
-# zero2mastery_terraform
+# terraform-practice-tutorial
 This repo is for practicing terraform
